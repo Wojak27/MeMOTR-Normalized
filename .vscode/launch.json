@@ -1,0 +1,721 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Eval Dancetrack",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "./configs/train_dancetrack.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR/outputs/memotr_dancetrack/memotr_dancetrack.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR/outputs/memotr_dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Train Dancetrack",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config-path",
+                "./configs/train_dancetrack.yaml",
+                "--outputs-dir",
+                "./outputs/memotr_dancetrack/",
+                "--batch-size",
+                "1",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR" // replace with your Conda env name
+            }
+        },
+        {
+            "name": "Train Dancetrack nGPT",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config-path",
+                "./configs/train_dancetrack_ngpt.yaml",
+                "--outputs-dir",
+                "./outputs/memotr_dancetrack/",
+                "--batch-size",
+                "1",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR" // replace with your Conda env name
+            }
+        },
+        {
+            "name": "Eval Dancetrack 1 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_0.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 2 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_1.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 3 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_2.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 4 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_3.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 5 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_4.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 6 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_5.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 7 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_6.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 8 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/configs/train_dancetrack.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_7.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 9 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/configs/train_dancetrack.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_8.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 10 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_9.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 11 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_10.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 12 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_11.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack 13 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack/checkpoint_12.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 1 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_0.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 2 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_1.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 3 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_2.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 4 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_3.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 5 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_4.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 6 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_5.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 7 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_6.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 8 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_7.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 9 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_8.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 10 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_9.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 11 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_10.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        },
+        {
+            "name": "Eval Dancetrack nGPT 12 epochs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "eval",
+                "--config-path",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/train/config.yaml",
+                "--data-root",
+                "/4TBSSD_Permanent/code/NSVA_Track/HybridSORT/datasets",
+                "--eval-mode",
+                "specific",
+                "--eval-model",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1/checkpoint_11.pth",
+                "--eval-dir",
+                "/4TBSSD_Permanent/code/MeMOTR-Normalized/outputs/dancetrack_ngptv1",
+                "--eval-threads",
+                "1"
+            ],
+            "env": {
+                "CONDA_DEFAULT_ENV": "MeMOTR"
+            }
+        }
+    ]
+}

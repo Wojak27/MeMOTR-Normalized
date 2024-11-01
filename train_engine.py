@@ -5,6 +5,7 @@ import time
 import torch
 import torch.nn as nn
 import torch.distributed
+import wandb
 
 from typing import List, Tuple, Dict
 from torch.utils.data import DataLoader
@@ -274,6 +275,9 @@ def train_one_epoch(model: MeMOTR, train_states: dict, max_norm: float,
                 )
 
         train_states["global_iters"] += 1
+        d = {k:log_dict[k][0] for k in log_dict.keys()}
+        d["total_loss"] = loss.item()
+        wandb.log(d)
 
     # Epoch end
     metric_log.sync()

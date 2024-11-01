@@ -9,4 +9,4 @@
 # ------------------------------------------------------------------------
 
 
-from .ms_deform_attn import MSDeformAttn
+from .ms_deform_attn import MSDeformAttn, nGPT_MSDeformAttn

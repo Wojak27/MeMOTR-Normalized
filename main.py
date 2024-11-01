@@ -10,6 +10,9 @@ import torch.backends.cudnn
 from utils.utils import distributed_rank
 from utils.utils import yaml_to_dict
 from configs.utils import update_config
+import wandb
+
+wandb.login()
 
 
 def parse_option():
@@ -121,4 +124,9 @@ if __name__ == '__main__':
     # Merge parser option and .yaml config, then run main function.
     merged_config = update_config(config=cfg, option=opt)
     merged_config["CONFIG_PATH"] = opt.config_path
+    run = wandb.init(
+    # Set the project where this run will be logged
+    project="nGPT testing",
+    # Track hyperparameters and run metadata
+    config=merged_config)
     main(config=merged_config)

@@ -1,3 +1,10 @@
 .idea
 *.pth
 *.mp4
+TrackEval/trackeval/__pycache__/
+TrackEval/trackeval/datasets/__pycache__/
+**/__pycache__/
+**/*.pth
+**/*.txt
+outputs/
+wandb/

@@ -2,6 +2,7 @@
 import torch
 
 from typing import List
+from typing import Union
 
 
 class TrackInstances:
@@ -49,7 +50,7 @@ class TrackInstances:
         assert self.ref_pts.shape[0] == self.query_embed.shape[0]
         return max(self.query_embed.shape[0], self.labels.shape[0])
 
-    def __getitem__(self, item: int | slice | torch.BoolTensor) -> "TrackInstances":
+    def __getitem__(self, item: Union[int, slice, torch.BoolTensor]) -> "TrackInstances":
         if type(item) == int:
             if item >= len(self) or item < -len(self):
                 raise IndexError("TrackInstances index out of range!")

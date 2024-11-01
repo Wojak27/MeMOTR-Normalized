@@ -17,6 +17,7 @@ from .utils import get_clones, pos_to_pos_embed
 
 from .backbone import build as build_backbone_with_pe
 from .deformable_transformer import build as build_deformable_transformer
+from .ndeformable_transformer import build as build_ndeformable_transformer
 
 from utils.nested_tensor import NestedTensor
 from structures.track_instances import TrackInstances
@@ -299,7 +300,11 @@ def build(config: dict):
     num_classes = dataset_num_classes[config["DATASET"]]
 
     backbone_with_pe = build_backbone_with_pe(config=config)
-    deformable_transformer = build_deformable_transformer(config=config)
+    if config["USE_NGPT"]:
+        print("Using nGPT Transformer.")
+        deformable_transformer = build_ndeformable_transformer(config=config)
+    else:
+        deformable_transformer = build_deformable_transformer(config=config)
     query_updater = build_query_updater(config=config)
 
     return MeMOTR(
